@@ -30,13 +30,9 @@ ingredients_list = st.multiselect (
 )
 
 
-if ingredients_list and your_name:
-    # st.write(ingredients_list)
-    # st.text(ingredients_list)
-    
+if ingredients_list and your_name:    
     ingredients_string = ''
     
-
     for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen +' '
         smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/"+fruit_chosen)
